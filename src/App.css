@@ -1,0 +1,86 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App.ROLLING h2 {
+  margin-bottom: 2rem !important;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+.points-to-invest {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.X-indicator {
+  background-color: #ffc107;
+  color: #000;
+  border-radius: 50%;
+  padding: 0.2rem 0.6rem;
+}
+
+.O-indicator {
+  background-color: #0d6efd;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.2rem 0.6rem;
+}
+
+.gamble-input {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100px;
+  text-align: center;
+}
+
+.gamble-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.title {
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: 'Cassandra', sans-serif;
+  font-size: 3rem;
+  color: #28a745;
+  /* margin-bottom: 1rem; */
+  /* position in to top center of the screen */
+  /* position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%); */
+  pointer-events: none;
+  text-shadow: 0 2px 4px #28a745;
+}
+
+@media (max-width: 768px) {
+
+
+  .title {
+    font-size: 2.5rem;
+    top: 1rem;
+  }
+}
