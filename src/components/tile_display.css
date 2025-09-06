@@ -14,6 +14,7 @@
 .claimedBy {
 
     color: #0f5132;
+    margin: 0 !important;
 }
 
 .investedPoints {
@@ -30,8 +31,8 @@
 .investedPoints .x-points {
     position: absolute;
 
-    background-color: #ffc107;
-    color: #000;
+    background-color: #28a745;
+    color: #fff;
     border-radius: 50%;
     width: 24px;
     height: 24px;
@@ -46,7 +47,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #0d6efd;
+    background-color: #ad0f14;
     color: #fff;
     border-radius: 50%;
     width: 24px;

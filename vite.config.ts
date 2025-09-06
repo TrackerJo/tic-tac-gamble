@@ -8,7 +8,7 @@ const outDir = resolve(__dirname, 'dist')
 export default defineConfig({
   plugins: [react()],
   root,
-  base: '/',
+  base: '/tic-tac-gamble/',
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
@@ -20,6 +20,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(root, 'index.html'),
+        local: resolve(root, 'Local/index.html'),
+        online: resolve(root, 'Online/index.html'),
 
 
       }

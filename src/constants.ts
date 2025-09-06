@@ -41,13 +41,15 @@ export class Tile {
 
 export class Board {
     grid: Tile[][];
-    winner: PlayerSymbol | null = null;
+    winner: PlayerSymbol;
 
     constructor(params?: { grid: Tile[][] }) {
         if (params && params.grid) {
             this.grid = params.grid;
+            this.winner = PlayerSymbol.EMPTY;
         } else {
             this.grid = [];
+            this.winner = PlayerSymbol.EMPTY;
         }
     }
 
@@ -122,3 +124,33 @@ export const TurnStage = {
 } as const;
 
 export type TurnStage = typeof TurnStage[keyof typeof TurnStage];
+
+export class Player {
+    displayName: string;
+    symbol: PlayerSymbol;
+    isTurn: boolean;
+    pointsToInvest: number;
+    isGambling: boolean;
+    gambleAmount: number;
+    playerId: string;
+
+    constructor(params: {
+        displayName: string,
+        symbol: PlayerSymbol,
+        isTurn?: boolean,
+        pointsToInvest?: number,
+        isGambling?: boolean,
+        gambleAmount?: number,
+        playerId: string
+    }) {
+        this.displayName = params.displayName;
+        this.symbol = params.symbol;
+        this.isTurn = params.isTurn || false;
+        this.pointsToInvest = params.pointsToInvest || 0;
+        this.isGambling = params.isGambling || false;
+        this.gambleAmount = params.gambleAmount || 1;
+        this.playerId = params.playerId;
+    }
+
+
+}

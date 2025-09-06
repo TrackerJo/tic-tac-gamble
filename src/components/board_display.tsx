@@ -6,12 +6,13 @@ type BoardDisplayProps = {
     board: Board,
     onTileAction: (tileIndex: TileIndex, player: PlayerSymbol, newTurn: PlayerSymbol) => void,
     turn: PlayerSymbol,
+    canPlay: boolean,
 
 }
 
-function BoardDisplay({ board, turn, onTileAction }: BoardDisplayProps) {
+function BoardDisplay({ board, turn, onTileAction, canPlay }: BoardDisplayProps) {
     return (
-        <div className="board">
+        <div className={`board ${canPlay ? 'can-play' : 'cannot-play'}`}>
             {board.grid.map((row, rowIndex) => (
                 <div key={rowIndex} className="board-row">
                     {row.map((tile, colIndex) => (

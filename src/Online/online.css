@@ -12,8 +12,50 @@
   color: #28a745;
 }
 
+.App.ROLLING h2 {
+  margin-bottom: 2rem !important;
+}
+
 h2 {
   margin-bottom: 0;
+}
+
+.points-to-invest {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.X-indicator {
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.2rem 0.6rem;
+}
+
+.O-indicator {
+  background-color: #ad0f14;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.2rem 0.6rem;
+}
+
+.gamble-input {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100px;
+  text-align: center;
+}
+
+.gamble-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
 }
 
 .title {
@@ -33,24 +75,6 @@ h2 {
   transform: translateX(-50%); */
   pointer-events: none;
   text-shadow: 0 2px 4px #28a745;
-}
-
-.actions {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-}
-
-.actions button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
 }
 
 @media (max-width: 768px) {

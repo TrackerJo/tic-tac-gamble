@@ -17,7 +17,7 @@ function TileDisplay({ tile, onTileAction, turn, board }: TileDisplayProps) {
         console.log(turn);
         console.log(tile);
         console.log(board);
-        if (tile.claimedBy !== ' ' || board.winner != null) return;
+        if (tile.claimedBy !== ' ' || board.winner != PlayerSymbol.EMPTY) return;
         onTileAction(turn, turn === 'X' ? 'O' : 'X');
     }
 

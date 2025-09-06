@@ -10,3 +10,8 @@
     gap: 10px;
     margin-bottom: 10px;
 }
+
+.cannot-play {
+    pointer-events: none;
+
+}
