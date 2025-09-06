@@ -89,13 +89,13 @@ function App() {
       <h2 className='title'>Tic Tac Gamble</h2>
       <div className={`App ${turnStage}`} >
 
-        {board.winner ? <h2> Winner: {board.winner} </h2> : <h2>Current Turn: <span className={`${turn}-indicator`}>{turn}</span></h2>}
+        {board.winner != PlayerSymbol.EMPTY ? <h2> Winner: {board.winner} </h2> : <h2>Current Turn: <span className={`${turn}-indicator`}>{turn}</span></h2>}
 
 
 
-        {
+        {board.winner != PlayerSymbol.EMPTY ? <></> :
           turnStage === TurnStage.INVESTING ? <>
-            {!board.winner && <label htmlFor="" className='points-to-invest'>Points To Invest: {pointsToInvest}</label>}
+            {board.winner == PlayerSymbol.EMPTY && <label htmlFor="" className='points-to-invest'>Points To Invest: {pointsToInvest}</label>}
 
 
             <BoardDisplay board={board} turn={turn} onTileAction={handleTileAction} canPlay={true} />
